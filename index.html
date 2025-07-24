@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="title" content="Pictures Editor">
+    <meta name="description" content="Simple site permettant d'apporter des modifications de positions, de tailles, et de rotation à une image.">
+    <title>Pictures editor</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/icon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/icon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/icons/icon-48x48.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/icons/icon-64x64.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-title" content="Pictures Editor" />
+    <link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+    <div class="slide">
+        <div id="buttonZone">
+            <button class="topL">
+                <img src="images/topl.png" alt="position">
+            </button>
+            <button class="botL">
+                <img src="images/botl.png" alt="position">
+            </button>
+            <button class="center">
+                <img src="images/center.png" alt="position">
+            </button>
+            <button class="topR">
+                <img src="images/topr.png" alt="position">
+            </button>
+            <button class="botR">
+                <img src="images/botr.png" alt="position">
+            </button>
+        </div>
+        <div class="zone">
+            <div class="draggableImg">
+                <div class="rot">
+                    <img src="images/img2.png" alt="image">
+                    <button class="rotate">
+                        <img src="images/rotate.png" alt="rotate">
+                    </button>
+                </div>
+                <button class="resize">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M408 64L552 64C565.3 64 576 74.7 576 88L576 232C576 241.7 570.2 250.5 561.2 254.2C552.2 257.9 541.9 255.9 535 249L496 210L409 297C399.6 306.4 384.4 306.4 375.1 297L343.1 265C333.7 255.6 333.7 240.4 343.1 231.1L430.1 144.1L391.1 105.1C384.2 98.2 382.2 87.9 385.9 78.9C389.6 69.9 398.3 64 408 64zM232 576L88 576C74.7 576 64 565.3 64 552L64 408C64 398.3 69.8 389.5 78.8 385.8C87.8 382.1 98.1 384.2 105 391L144 430L231 343C240.4 333.6 255.6 333.6 264.9 343L296.9 375C306.3 384.4 306.3 399.6 296.9 408.9L209.9 495.9L248.9 534.9C255.8 541.8 257.8 552.1 254.1 561.1C250.4 570.1 241.7 576 232 576z"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="instruction">
+            <h3>Tuto</h3>
+            <p>Cliquez sur l'image pour faire apparaître la zone de modification.</p>
+            <p>Lorsque la zone de modification est active, double-cliquez sur l'image pour la faire disparaître.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --size: 800px;
+    --height: 7vh;
+}
+
+@media all and (max-width: 1400px){
+    :root{
+        --size: 700px;
+    }
+}
+@media all and (max-width: 1000px){
+    :root{
+        --size: 600px;
+        --height: 9vh;
+    }
+}
+@media all and (max-width: 800px){
+    :root{
+        --size: 500px;
+    }
+}
+@media all and (max-width: 600px){
+    :root{
+        --size: 400px;
+        --height: 11vh;
+    }
+}
+@media all and (max-width: 500px){
+    :root{
+        --size: 300px;
+        --height: 17vh;
+    }
+}
+@media all and (max-width: 450px){
+    :root{
+        --size: 250px;
+    }
+}
+@media all and (max-width: 350px){
+    :root{
+        --size: 200px;
+        --height: 28vh;
+    }
+}
+
+.slide{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zone{
+    width: var(--size);
+    height: var(--size);
+    border: 3px black dashed;
+    background-color: rgb(255, 245, 227);
+}
+
+.draggableImg{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.draggableImg .rot{
+    width: 100%;
+}
+
+.draggableImg .rot img{
+    width: 100%;
+    height: 100%;
+}
+
+.draggableImg .resize{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.draggableImg .rotate{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 150%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: none;
+}
+
+.zone .draggableImg.clicked{
+    position: absolute;
+    cursor: grab;
+    border: dashed 1px gray;
+}
+
+.zone .draggableImg.clicked .resize{
+    display: block;
+}
+
+.zone .draggableImg.clicked .resize svg{
+    transform: scaleX(-1);
+}
+
+.zone .draggableImg.clicked .rotate{
+    display: block;
+}
+
+#buttonZone{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: var(--height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#buttonZone button{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(187, 206, 252);
+    border-radius: 10px;
+}
+
+#buttonZone button:hover{
+    background-color: rgb(208, 219, 243);
+}
+
+#buttonZone button img{
+    width: 100%;
+}
+
+.instruction{
+    height: var(--height);
+    width: var(--size);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instruction p{
+    width: 100%;
+}
